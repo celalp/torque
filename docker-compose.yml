@@ -1,0 +1,13 @@
+version: '3'
+services:
+  torque:
+    image: torque:latest
+    hostname: torque
+    volumes:
+      - ./home:/home/alper
+#      - ./torque_config:/var/spool/torque
+    restart: "no"
+    ports:
+    - 22 # ssh
+    cap_add:
+    - SYS_RESOURCE
